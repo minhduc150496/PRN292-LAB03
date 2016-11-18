@@ -64,7 +64,8 @@ namespace PRN292_LAB03
             if (dgCD.SelectedRows.Count > 0)
             {
                 var index = dgCD.SelectedRows[0].Index;
-                var cd = cdList.ElementAtOrDefault(index);
+                var list = (BindingList<CD>)dgCD.DataSource;
+                var cd = list.ElementAtOrDefault(index);
                 using (inputForm = new InputForm(this))
                 {
                     inputForm.prepareEditing(cd);

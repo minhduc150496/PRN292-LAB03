@@ -1,0 +1,40 @@
+Employee info:
+1. Full name
+2. DOB
+3. Gender
+4. National: multi select/ single choice
+5. Phone: +([X]XX)-XXX-XXX-XXX
+6. Address: multi lines
+7. Qualification: Multi select and edit
+8. Salary: number
+
+* Use case:
+- CRUD
+- Sort
+- Search: full name, phone, address
+- Load from
+- Save to
+
+* Classes:
+1. Emp: fields
+2. MainForm
+3. InputForm
+4. Program
+
+* Functionals:
+- Design UI: done
+
+- Read: DataGridView not display, DONE!!
+- Delete: DOING, DONE!!
+- Create: DONE!!
+- Edit: Doing!! DONE!!
+
+- Sort: DONE !!
+- Search, Refresh: DONE!!
+- Load from: DONE!!
+- Save to: DONE !!!!
+
+* Test cases:
+- Search xong roi Delete: Passed
+- Search xong roi Update: Passed
+- Search xong roi Sort: Passed
