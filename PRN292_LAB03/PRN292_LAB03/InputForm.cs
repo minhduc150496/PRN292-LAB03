@@ -40,7 +40,7 @@ namespace PRN292_LAB03
             txtAlbum.Text = cd.Album;
             txtSinger.Text = cd.Singer;
             txtDuration.Text = cd.Duration.ToString();
-            txtSongs.Text = string.Join("\n", cd.Songs);
+            txtSongs.Text = string.Join(System.Environment.NewLine, cd.Songs);
             cbGenre.SelectedIndex = (int)cd.Genre;
         }
 
@@ -103,10 +103,12 @@ namespace PRN292_LAB03
                     cd.Album = txtAlbum.Text;
                     cd.Singer = txtSinger.Text;
                     cd.Duration = long.Parse(txtDuration.Text);
-                    cd.Songs = txtSongs.Text.Split('\n').ToList<string>();
+                    cd.Songs = txtSongs.Lines.OfType<string>().ToList<string>();
                     cd.Genre = (CDGenre)cbGenre.SelectedIndex;
                     // 2. Add the new Emp to list
                     var mainForm = (DetailForm)this.Owner;
+                    var list = (BindingList<CD>)mainForm.dgCD.DataSource;
+                    list.Add(cd);
                     mainForm.cdList.Add(cd);
                 } else
                 {
@@ -116,6 +118,10 @@ namespace PRN292_LAB03
                     oldCD.Duration = long.Parse(txtDuration.Text);
                     oldCD.Songs = txtSongs.Text.Split('\n').ToList<string>();
                     oldCD.Genre = (CDGenre)cbGenre.SelectedIndex;
+
+                    var mainForm = (DetailForm)this.Owner;
+                    mainForm.dgCD.Refresh();
+
                     // 2. Close Dialog
                     this.Close();
                 }

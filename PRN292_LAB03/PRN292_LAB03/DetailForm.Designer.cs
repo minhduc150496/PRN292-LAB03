@@ -258,7 +258,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAddNew;
-        private System.Windows.Forms.DataGridView dgCD;
         private System.Windows.Forms.GroupBox gbSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSinger;
@@ -272,6 +271,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MainForm;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.DataGridView dgCD;
     }
 }
 
