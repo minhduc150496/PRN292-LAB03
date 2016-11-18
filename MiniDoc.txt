@@ -37,4 +37,5 @@ Employee info:
 * Test cases:
 - Search xong roi Delete: Passed
 - Search xong roi Update: Passed
+- Search xong roi Edit: Passed
 - Search xong roi Sort: Passed
